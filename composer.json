@@ -1,7 +1,7 @@
 {
     "name": "mb7/ezphp-router",
     "description": "ez Router for PHP",
-    "type": "project",
+    "type": "library",
     "authors": [
         {
             "name": "Murat Bastuerk",

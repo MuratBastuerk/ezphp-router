@@ -121,7 +121,7 @@ class SimpleStaticRouter implements RouterInterface
      */
     public function routeToRelativeURL(string $relativeUrl)
     {
-        $route = $this->getHost().$relativeUrl;
+        $route = $this->getHost()."/".$relativeUrl;
         header("Location: $route");
     }
 

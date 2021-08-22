@@ -61,5 +61,5 @@ interface RouterInterface
      * @param string $url
      * @return mixed
      */
-    public function routeToURL(string $url);
+    public function routeToURL(string $url): void;
 }

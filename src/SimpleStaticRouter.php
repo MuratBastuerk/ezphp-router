@@ -10,29 +10,31 @@ namespace Mb7\EzPhp\Router;
 class SimpleStaticRouter implements RouterInterface
 {
     /**
-     * @var
+     * @var array
      */
-    private $server;
+    private array $server;
+
     /**
-     * @var
+     * @var array
      */
-    private $get;
+    private array $get;
+
     /**
-     * @var
+     * @var array
      */
-    private $post;
+    private array $post;
+
     /**
      * @var string
      */
-    private $defaultRoute = "/index/index";
+    private string $defaultRoute = "/index/index";
 
     /**
-     * SimpleStaticRouter constructor.
-     * @param $server
-     * @param $get
-     * @param $post
+     * @param array $server
+     * @param array $get
+     * @param array $post
      */
-    public function __construct($server, $get, $post)
+    public function __construct(array $server, array $get, array $post)
     {
         $this->server = $server;
         $this->get = $get;
@@ -111,7 +113,7 @@ class SimpleStaticRouter implements RouterInterface
     /**
      * @inheritDoc
      */
-    public function routeToURL(string $url)
+    public function routeToURL(string $url): void
     {
         header("Location: $url");
     }
@@ -129,7 +131,7 @@ class SimpleStaticRouter implements RouterInterface
      * @param $url
      * @return array
      */
-    protected function getUrlParts($url)
+    protected function getUrlParts($url): array
     {
         return explode("/", $url);
     }
